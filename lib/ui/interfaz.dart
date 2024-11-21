@@ -1,5 +1,4 @@
 // interfaz.dart
-// interfaz.dart
 import 'package:flutter/material.dart';
 import '../logica/peso.dart';  // Importa la lógica del cálculo
 
