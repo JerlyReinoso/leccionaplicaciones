@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 allprojects {
     repositories {
         google()
@@ -16,3 +17,23 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+=======
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+>>>>>>> 6a1a2bc4ebbd92d44e4dee84c81b0e92a6364bb0
